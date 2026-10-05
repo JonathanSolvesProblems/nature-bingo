@@ -1,0 +1,13 @@
+node_modules/
+.venv/
+__pycache__/
+tmp/
+.env
+.env.*
+!.env.example
+
+# Raw footage and the edited demo video
+broll/
+_videos/
+*.webm
+*.edit-plan.json
