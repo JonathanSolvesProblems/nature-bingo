@@ -95,7 +95,7 @@ def main():
     lines = []
     for name, cap in CAPTIONS.items():
         assert len(cap) <= 140, (name, len(cap))
-        assert "â€”" not in cap and "â€“" not in cap, name
+        assert "—" not in cap and "–" not in cap, name  # no em or en dashes
         f = OUT / f"{name}.png"
         im = Image.open(f)
         mb = f.stat().st_size / 1e6
