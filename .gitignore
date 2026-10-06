@@ -16,3 +16,4 @@ _videos/
 data/cache/
 data/features.parquet
 .vercel/
+previews/

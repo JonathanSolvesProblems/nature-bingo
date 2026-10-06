@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html><head><meta charset="utf-8"><title>towns</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; height: 100%; background: #1D1915; color: #F1EBE2; font-family: Lexend, sans-serif; }
+  #map { position: absolute; inset: 0; }
+  .leaflet-container { background: #1D1915; }
+  .panel { position: absolute; left: 56px; top: 48px; z-index: 500; background: rgba(29,25,21,.88); padding: 22px 28px; border-radius: 20px; }
+  .panel h1 { font: 400 46px/1 Shrikhand, serif; margin: 0 0 10px; }
+  .panel p { margin: 0; font-size: 24px; color: #B9AE9F; }
+  .panel b { color: #D9A2F3; font-variant-numeric: tabular-nums; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; background: #BE56EB; border: 2px solid #F1EBE2; transform: scale(0); transition: transform .35s cubic-bezier(.34,1.36,.52,1); }
+  .dot.on { transform: scale(1); }
+  .dot.home { width: 26px; height: 26px; background: #D9A2F3; box-shadow: 0 0 0 6px rgba(190,86,235,.35); }
+  .lbl { color: #F1EBE2; font: 600 22px Lexend, sans-serif; white-space: nowrap; text-shadow: 0 1px 4px #000; opacity: 0; transition: opacity .6s; }
+  .lbl.on { opacity: 1; }
+  .city { color: #B9AE9F; font: 600 20px Lexend, sans-serif; white-space: nowrap; text-shadow: 0 1px 4px #000; }
+  .leaflet-control-attribution { background: rgba(29,25,21,.7) !important; color: #B9AE9F !important; font-size: 12px; }
+  .leaflet-control-attribution a { color: #D9A2F3 !important; }
+</style></head>
+<body>
+<div id="map"></div>
+<div class="panel"><h1>Where it learned</h1><p><b id="n">0</b> towns · Octobers&nbsp;<b>2016 to 2025</b></p></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const Q = new URLSearchParams(location.search);
+if (Q.get("portrait")) {
+  // Phone framing: bigger type, panel above the dots, a tighter view of the same towns.
+  const s = document.createElement("style");
+  s.textContent = ".panel{left:60px;right:60px;top:230px;padding:30px 36px}.panel h1{font-size:84px}.panel p{font-size:44px}" +
+    ".city{font-size:38px}.lbl{font-size:44px}.dot{width:26px;height:26px;border-width:3px}.dot.home{width:46px;height:46px}";
+  document.head.append(s);
+}
+const map = L.map("map", { zoomControl: false, attributionControl: true, zoomSnap: 0.1 })
+  .setView(Q.get("portrait") ? [45.05, -75.35] : [45.3, -75.1], Q.get("portrait") ? 8.6 : 8.6);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
+  attribution: "Basemap: Esri, HERE, Garmin, OpenStreetMap contributors", maxZoom: 16 }).addTo(map);
+for (const [name, ll] of [["Ottawa", [45.4215, -75.6972]], ["Montreal", [45.5019, -73.5674]]]) {
+  const edge = Q.get("portrait") && name === "Montreal";  // right edge of a phone frame: text ends at the city
+  L.marker(ll, { icon: L.divIcon({ className: "", html: `<div class="city" style="${edge ? "text-align:right" : ""}">${name}</div>`,
+    iconSize: edge ? [200, 44] : [120, 24], iconAnchor: edge ? [200, -6] : [60, 12] }) }).addTo(map);
+}
+fetch("../../data/towns.json").then(r => r.json()).then(towns => {
+  const els = [];
+  towns.forEach(t => {
+    const home = t.name === "Hawkesbury";
+    const big = Q.get("portrait");
+    const sz = home ? (big ? [52, 52] : [30, 30]) : (big ? [32, 32] : [18, 18]);
+    const m = L.marker([t.lat, t.lng], { icon: L.divIcon({ className: "", html: `<div class="dot${home ? " home" : ""}"></div>`, iconSize: sz }) }).addTo(map);
+    els.push({ m, home, t });
+  });
+  // west to east, so the dots sweep from Ottawa toward Montreal
+  els.sort((a, b) => a.t.lng - b.t.lng);
+  const n = document.getElementById("n");
+  els.forEach((e, i) => setTimeout(() => { e.m.getElement().firstChild.classList.add("on"); n.textContent = i + 1; }, 1200 + i * 110));
+  const hk = els.find(e => e.home);
+  setTimeout(() => {
+    L.marker([hk.t.lat, hk.t.lng], { icon: L.divIcon({ className: "", html: `<div class="lbl" id="hl">Hawkesbury</div>`, iconSize: [160, 28], iconAnchor: [-22, 34] }) }).addTo(map);
+    requestAnimationFrame(() => document.getElementById("hl").classList.add("on"));
+  }, 1200 + els.length * 110 + 300);
+});
+</script></body></html>
+
