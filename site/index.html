@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nature Bingo</title>
+<meta name="description" content="A printable bingo card of what is most likely out this October near your town. Print it, leave the phone at home, go find it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6f1e4;
+    --ink: #22261c;
+    --muted: #6b6a58;
+    --line: #2f3a24;
+    --leaf: #b5531c;
+    --moss: #4f6a2c;
+    --card: #fffdf6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1b1d16; --ink: #ece6d3; --muted: #a9a58e; --line: #c9c2a6;
+      --leaf: #e08a4f; --moss: #9dbb6a; --card: #24271d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font: 15px/1.5 Inter, system-ui, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; }
+  .controls p { margin: 0; flex: 1 1 320px; color: var(--muted); }
+  select, button {
+    font: inherit; padding: 9px 14px; border-radius: 8px; border: 1.5px solid var(--line);
+    background: var(--card); color: var(--ink);
+  }
+  button { background: var(--moss); color: #fff; border-color: var(--moss); font-weight: 600; cursor: pointer; }
+
+  .sheet { background: var(--card); border: 2px solid var(--line); border-radius: 6px; padding: 22px 22px 16px; }
+  header.top { display: flex; justify-content: space-between; align-items: end; gap: 16px; border-bottom: 2px solid var(--line); padding-bottom: 10px; }
+  h1 { font: 700 40px/1 Fraunces, Georgia, serif; margin: 0; letter-spacing: -0.5px; }
+  h1 span { color: var(--leaf); }
+  .where { text-align: right; font: 500 18px/1.2 Fraunces, Georgia, serif; }
+  .where small { display: block; font: 12px Inter, sans-serif; color: var(--muted); }
+
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1.5px solid var(--line); margin-top: 14px; }
+  .sq { position: relative; border: 1px solid var(--line); aspect-ratio: 1 / 1.08; display: flex; flex-direction: column; overflow: hidden; }
+  .sq img { width: 100%; flex: 1 1 auto; min-height: 0; object-fit: cover; filter: saturate(0.9); }
+  .sq .noimg { flex: 1 1 auto; display: grid; place-items: center; color: var(--muted); font-size: 12px; }
+  .sq .label { padding: 5px 7px 6px; background: var(--card); border-top: 1px solid var(--line); }
+  .sq .common { font: 600 13px/1.15 Inter, sans-serif; }
+  .sq .sci { font: italic 11px/1.2 Inter, sans-serif; color: var(--muted); }
+  .sq .tick { position: absolute; top: 6px; right: 6px; width: 22px; height: 22px; border: 2px solid var(--line); border-radius: 50%; background: var(--card); }
+
+  footer.notes { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; margin-top: 12px; font-size: 11.5px; color: var(--muted); }
+  footer.notes strong { color: var(--ink); }
+  .credits { font-size: 8.5px; line-height: 1.3; color: var(--muted); margin-top: 10px; }
+
+  .refusal { margin-top: 14px; padding: 18px; border: 2px dashed var(--line); border-radius: 6px; }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 30px; }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    footer.notes { grid-template-columns: 1fr; }
+  }
+  @page { size: letter; margin: 0.4in; }
+  @media print {
+    :root { --paper: #fff; --card: #fff; --ink: #111; --muted: #444; --line: #222; }
+    body { background: #fff; }
+    .controls { display: none; }
+    .wrap { padding: 0; max-width: none; }
+    .sheet { border: none; padding: 0; }
+    .grid { grid-template-columns: repeat(4, 1fr); margin-top: 10px; }
+    .sq { aspect-ratio: 1 / 0.92; }
+    h1 { font-size: 34px; }
+    footer.notes { font-size: 10px; margin-top: 8px; }
+    .credits { font-size: 7px; margin-top: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="controls">
+    <select id="town" aria-label="Town"></select>
+    <button onclick="window.print()">Print the card</button>
+    <p>Print it, leave the phone at home, and go find what is on it.</p>
+  </div>
+  <div class="sheet" id="sheet"></div>
+</div>
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
+
+function render(name, card) {
+  const sheet = document.getElementById("sheet");
+  const squares = card.squares.map(s => `
+    <div class="sq">
+      ${s.photo ? `<img src="${esc(s.photo)}" alt="${esc(s.common || s.name)}">` : `<div class="noimg">no open photo</div>`}
+      <span class="tick" aria-hidden="true"></span>
+      <div class="label"><div class="common">${esc(cap(s.common) || s.name)}</div><div class="sci">${esc(s.name)}</div></div>
+    </div>`).join("");
+  const logged = card.backtest_2025_logged;
+  const credits = card.squares.filter(s => s.photo_credit).map(s => `${esc(cap(s.common) || s.name)}: ${esc(s.photo_credit)}`).join(" · ");
+  sheet.innerHTML = `
+    <header class="top">
+      <h1>Nature <span>Bingo</span></h1>
+      <div class="where">${esc(name)}<small>October ${card.year} · within about 10 km</small></div>
+    </header>
+    <div class="grid">${squares}</div>
+    <footer class="notes">
+      <div><strong>How this card was made.</strong> A tabular model (TabPFN, open weights, run on a laptop) ranked what
+      iNaturalist users have photographed near here and across the region in past Octobers. These are the 16 things it
+      thinks you are most likely to find this month.</div>
+      <div><strong>What it cannot know.</strong> It only knows what people photographed and logged. Shy, small and
+      night-time things are under-counted.${logged != null ? ` When I ran the same method on last October, people photographed ${logged} of the 16 things on this town's card. The other ${16 - logged} went unphotographed, which is not the same as absent.` : ""}</div>
+    </footer>
+    <div class="credits">Photos from iNaturalist under their own open licences. ${credits}</div>`;
+}
+
+fetch("cards.json").then(r => r.json()).then(cards => {
+  const sel = document.getElementById("town");
+  const names = Object.keys(cards).sort();
+  sel.innerHTML = names.map(n => `<option>${esc(n)}</option>`).join("");
+  const want = new URLSearchParams(location.search).get("town");
+  sel.value = names.includes(want) ? want : (names.includes("Hawkesbury") ? "Hawkesbury" : names[0]);
+  const go = () => { render(sel.value, cards[sel.value]); history.replaceState(null, "", `?town=${encodeURIComponent(sel.value)}`); };
+  sel.onchange = go;
+  go();
+});
+</script>
+</body>
+</html>

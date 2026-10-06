@@ -53,15 +53,6 @@
   "photo_license": "cc-by-nc",
   "wikipedia": "https://en.wikipedia.org/wiki/Meleagris gallopavo"
  },
- "7089": {
-  "name": "Branta canadensis",
-  "common": "Canada Goose",
-  "iconic": "Aves",
-  "photo": null,
-  "photo_credit": null,
-  "photo_license": null,
-  "wikipedia": "https://en.wikipedia.org/wiki/Branta canadensis"
- },
  "47392": {
   "name": "Coprinus comatus",
   "common": "Shaggy Mane",
@@ -70,15 +61,6 @@
   "photo_credit": "(c) Tom Norton, some rights reserved (CC BY), uploaded by Tom Norton",
   "photo_license": "cc-by",
   "wikipedia": "https://en.wikipedia.org/wiki/Coprinus comatus"
- },
- "54854": {
-  "name": "Tilia americana",
-  "common": "basswood",
-  "iconic": "Plantae",
-  "photo": null,
-  "photo_credit": null,
-  "photo_license": null,
-  "wikipedia": "https://en.wikipedia.org/wiki/Tilia americana"
  },
  "4364": {
   "name": "Larus delawarensis",
@@ -142,5 +124,23 @@
   "photo_credit": "(c) William Van Hemessen, some rights reserved (CC BY-NC), uploaded by William Van Hemessen",
   "photo_license": "cc-by-nc",
   "wikipedia": "https://en.wikipedia.org/wiki/Ulmus americana"
+ },
+ "7089": {
+  "name": "Branta canadensis",
+  "common": "Canada Goose",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/239718896/medium.jpeg",
+  "photo_credit": "(c) Daniel LaFrance, some rights reserved (CC BY-NC), uploaded by Daniel LaFrance",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Branta canadensis"
+ },
+ "54854": {
+  "name": "Tilia americana",
+  "common": "basswood",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/15531/medium.jpg",
+  "photo_credit": "(c) Anita, some rights reserved (CC BY-NC)",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Tilia americana"
  }
 }
