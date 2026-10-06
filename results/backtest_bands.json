@@ -1,0 +1,26 @@
+{
+ "sparse": {
+  "towns": 16,
+  "median_past_october_records": 74.5,
+  "last_october": 1.19,
+  "region": 1.62,
+  "hgb": 2.19,
+  "tabpfn": 1.88
+ },
+ "middle": {
+  "towns": 16,
+  "median_past_october_records": 345.5,
+  "last_october": 4.56,
+  "region": 3.5,
+  "hgb": 3.94,
+  "tabpfn": 5.19
+ },
+ "dense": {
+  "towns": 16,
+  "median_past_october_records": 666.0,
+  "last_october": 7.56,
+  "region": 5.81,
+  "hgb": 6.88,
+  "tabpfn": 8.0
+ }
+}
