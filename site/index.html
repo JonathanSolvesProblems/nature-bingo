@@ -270,7 +270,7 @@ function walkHtml(w, total) {
       <p class="score"><b>${w.confirmed.length} of ${total}</b> confirmed by photo${w.probable.length ? `, <b>${w.probable.length}</b> probable` : ""}.</p>
       <ul>${li(w.confirmed, "confirmed")}${li(w.probable, "probable")}</ul>
       ${w.off_card.length ? `<p class="meta">Not on the card: ${w.off_card.map(esc).join(", ")}.</p>` : ""}
-      ${(w.inaturalist || []).length ? `<p class="meta">My photos on iNaturalist, so next October's card can learn from them: ${w.inaturalist.map(o => `<a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.name)}</a>`).join(", ")}.</p>` : ""}
+      ${(w.inaturalist || []).length ? `<p class="meta">My photos on iNaturalist, so next October's card can learn from them: ${w.inaturalist.map(o => `<a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.name)}</a>${o.quality_grade === "research" ? " (Research Grade, confirmed by another observer)" : o.quality_grade === "needs_id" ? " (still waiting for a second opinion)" : ""}`).join(", ")}.</p>` : ""}
       <div class="photos">${w.photos.map(p => `<figure><img src="${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy"><figcaption>${esc(p.caption)}</figcaption></figure>`).join("")}</div>
     </section>`;
 }

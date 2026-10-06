@@ -46,17 +46,21 @@
    "inaturalist": [
     {
      "name": "Canada Goose",
-     "url": "https://www.inaturalist.org/observations/406393901"
+     "url": "https://www.inaturalist.org/observations/406393901",
+     "quality_grade": "research"
     },
     {
      "name": "Mallard",
-     "url": "https://www.inaturalist.org/observations/406393902"
+     "url": "https://www.inaturalist.org/observations/406393902",
+     "quality_grade": "research"
     },
     {
      "name": "Ring-billed Gull",
-     "url": "https://www.inaturalist.org/observations/406393900"
+     "url": "https://www.inaturalist.org/observations/406393900",
+     "quality_grade": "needs_id"
     }
-   ]
+   ],
+   "inaturalist_checked": "2026-10-06"
   }
  ]
 }
