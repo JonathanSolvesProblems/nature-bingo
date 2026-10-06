@@ -144,6 +144,7 @@ select { padding-right: var(--s5); }
 .walk figure { margin: 0; }
 .walk figure img { width: 100%; height: 190px; object-fit: cover; border-radius: var(--r-tile); display: block; }
 .walk figcaption { font-size: var(--t-sm); color: var(--ink-soft); margin-top: var(--s1); }
+.walk a { color: var(--dab-text); }
 @media (max-width: 640px) { .walk .photos { grid-template-columns: 1fr; } }
 
 @keyframes drift { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
@@ -269,6 +270,7 @@ function walkHtml(w, total) {
       <p class="score"><b>${w.confirmed.length} of ${total}</b> confirmed by photo${w.probable.length ? `, <b>${w.probable.length}</b> probable` : ""}.</p>
       <ul>${li(w.confirmed, "confirmed")}${li(w.probable, "probable")}</ul>
       ${w.off_card.length ? `<p class="meta">Not on the card: ${w.off_card.map(esc).join(", ")}.</p>` : ""}
+      ${(w.inaturalist || []).length ? `<p class="meta">My photos on iNaturalist, so next October's card can learn from them: ${w.inaturalist.map(o => `<a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.name)}</a>`).join(", ")}.</p>` : ""}
       <div class="photos">${w.photos.map(p => `<figure><img src="${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy"><figcaption>${esc(p.caption)}</figcaption></figure>`).join("")}</div>
     </section>`;
 }
