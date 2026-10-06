@@ -1,0 +1,290 @@
+[
+ {
+  "name": "Hawkesbury",
+  "query": "Hawkesbury, Ontario",
+  "lat": 45.610281,
+  "lng": -74.6055611
+ },
+ {
+  "name": "L'Orignal",
+  "query": "L'Orignal, Ontario",
+  "lat": 45.6193572,
+  "lng": -74.6930392
+ },
+ {
+  "name": "Vankleek Hill",
+  "query": "Vankleek Hill, Ontario",
+  "lat": 45.5196086,
+  "lng": -74.6519669
+ },
+ {
+  "name": "Alfred",
+  "query": "Alfred, Ontario",
+  "lat": 45.5579611,
+  "lng": -74.8825971
+ },
+ {
+  "name": "Plantagenet",
+  "query": "Plantagenet, Ontario",
+  "lat": 45.5354046,
+  "lng": -74.9970666
+ },
+ {
+  "name": "Rockland",
+  "query": "Rockland, Ontario",
+  "lat": 45.5485795,
+  "lng": -75.2915629
+ },
+ {
+  "name": "Bourget",
+  "query": "Bourget, Ontario",
+  "lat": 45.4348751,
+  "lng": -75.1578861
+ },
+ {
+  "name": "Casselman",
+  "query": "Casselman, Ontario",
+  "lat": 45.313529,
+  "lng": -75.086746
+ },
+ {
+  "name": "Embrun",
+  "query": "Embrun, Ontario",
+  "lat": 45.2742012,
+  "lng": -75.2749125
+ },
+ {
+  "name": "Russell",
+  "query": "Russell, Ontario",
+  "lat": 45.2573172,
+  "lng": -75.3583264
+ },
+ {
+  "name": "Limoges",
+  "query": "Limoges, Ontario",
+  "lat": 45.3341367,
+  "lng": -75.2519986
+ },
+ {
+  "name": "Alexandria",
+  "query": "Alexandria, Ontario",
+  "lat": 45.3179423,
+  "lng": -74.6397639
+ },
+ {
+  "name": "Maxville",
+  "query": "Maxville, Ontario",
+  "lat": 45.2885939,
+  "lng": -74.8554938
+ },
+ {
+  "name": "Lancaster",
+  "query": "Lancaster, Ontario",
+  "lat": 45.1412662,
+  "lng": -74.4999495
+ },
+ {
+  "name": "Cornwall",
+  "query": "Cornwall, Ontario",
+  "lat": 45.0469989,
+  "lng": -74.7333845
+ },
+ {
+  "name": "Long Sault",
+  "query": "Long Sault, Ontario",
+  "lat": 45.0283111,
+  "lng": -74.8964683
+ },
+ {
+  "name": "Ingleside",
+  "query": "Ingleside, Ontario",
+  "lat": 44.9954941,
+  "lng": -74.9867427
+ },
+ {
+  "name": "Morrisburg",
+  "query": "Morrisburg, Ontario",
+  "lat": 44.8977043,
+  "lng": -75.1829545
+ },
+ {
+  "name": "Iroquois",
+  "query": "Iroquois, Ontario",
+  "lat": 44.8492835,
+  "lng": -75.3151083
+ },
+ {
+  "name": "Winchester",
+  "query": "Winchester, Ontario",
+  "lat": 45.0928774,
+  "lng": -75.35299
+ },
+ {
+  "name": "Chesterville",
+  "query": "Chesterville, Ontario",
+  "lat": 45.1024266,
+  "lng": -75.2289179
+ },
+ {
+  "name": "Kemptville",
+  "query": "Kemptville, Ontario",
+  "lat": 45.0154164,
+  "lng": -75.644567
+ },
+ {
+  "name": "Merrickville",
+  "query": "Merrickville, Ontario",
+  "lat": 44.9161119,
+  "lng": -75.8369285
+ },
+ {
+  "name": "Prescott",
+  "query": "Prescott, Ontario",
+  "lat": 44.7184132,
+  "lng": -75.5191675
+ },
+ {
+  "name": "Brockville",
+  "query": "Brockville, Ontario",
+  "lat": 44.6039207,
+  "lng": -75.7016829
+ },
+ {
+  "name": "Gananoque",
+  "query": "Gananoque, Ontario",
+  "lat": 44.3352722,
+  "lng": -76.1646638
+ },
+ {
+  "name": "Athens",
+  "query": "Athens, Ontario",
+  "lat": 44.625942,
+  "lng": -75.952256
+ },
+ {
+  "name": "Smiths Falls",
+  "query": "Smiths Falls, Ontario",
+  "lat": 44.9013316,
+  "lng": -76.0212062
+ },
+ {
+  "name": "Perth",
+  "query": "Perth, Ontario",
+  "lat": 44.8987,
+  "lng": -76.2486
+ },
+ {
+  "name": "Carleton Place",
+  "query": "Carleton Place, Ontario",
+  "lat": 45.1403366,
+  "lng": -76.1465672
+ },
+ {
+  "name": "Almonte",
+  "query": "Almonte, Ontario",
+  "lat": 45.226049,
+  "lng": -76.1945277
+ },
+ {
+  "name": "Arnprior",
+  "query": "Arnprior, Ontario",
+  "lat": 45.433515,
+  "lng": -76.3543692
+ },
+ {
+  "name": "Renfrew",
+  "query": "Renfrew, Ontario",
+  "lat": 45.7300564,
+  "lng": -77.2793698
+ },
+ {
+  "name": "Westport",
+  "query": "Westport, Ontario",
+  "lat": 44.678462,
+  "lng": -76.397463
+ },
+ {
+  "name": "Lachute",
+  "query": "Lachute, Quebec",
+  "lat": 45.6560478,
+  "lng": -74.3401388
+ },
+ {
+  "name": "Brownsburg-Chatham",
+  "query": "Brownsburg-Chatham, Quebec",
+  "lat": 45.676516,
+  "lng": -74.4046061
+ },
+ {
+  "name": "Saint-Andr\u00e9-d'Argenteuil",
+  "query": "Saint-Andr\u00e9-d'Argenteuil, Quebec",
+  "lat": 45.563675,
+  "lng": -74.3335812
+ },
+ {
+  "name": "Rigaud",
+  "query": "Rigaud, Quebec",
+  "lat": 45.4794481,
+  "lng": -74.3019608
+ },
+ {
+  "name": "Hudson",
+  "query": "Hudson, Quebec",
+  "lat": 45.464465,
+  "lng": -74.150848
+ },
+ {
+  "name": "Montebello",
+  "query": "Montebello, Quebec",
+  "lat": 45.6512171,
+  "lng": -74.942673
+ },
+ {
+  "name": "Papineauville",
+  "query": "Papineauville, Quebec",
+  "lat": 45.61884,
+  "lng": -75.020142
+ },
+ {
+  "name": "Thurso",
+  "query": "Thurso, Quebec",
+  "lat": 45.598185,
+  "lng": -75.246048
+ },
+ {
+  "name": "Saint-Polycarpe",
+  "query": "Saint-Polycarpe, Quebec",
+  "lat": 45.3021238,
+  "lng": -74.3041891
+ },
+ {
+  "name": "Coteau-du-Lac",
+  "query": "Coteau-du-Lac, Quebec",
+  "lat": 45.2963957,
+  "lng": -74.1782005
+ },
+ {
+  "name": "Huntingdon",
+  "query": "Huntingdon, Quebec",
+  "lat": 45.087339,
+  "lng": -74.173851
+ },
+ {
+  "name": "Ormstown",
+  "query": "Ormstown, Quebec",
+  "lat": 45.1255418,
+  "lng": -73.9922809
+ },
+ {
+  "name": "Wakefield",
+  "query": "Wakefield, Quebec",
+  "lat": 45.639968,
+  "lng": -75.92926
+ },
+ {
+  "name": "Shawville",
+  "query": "Shawville, Quebec",
+  "lat": 45.6035643,
+  "lng": -76.4914676
+ }
+]
