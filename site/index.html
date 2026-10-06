@@ -51,7 +51,14 @@
   .sq .label { flex: 1 1 auto; padding: 5px 7px 6px; background: var(--card); border-top: 1px solid var(--line); }
   .sq .common { font: 600 13px/1.15 Inter, sans-serif; }
   .sq .sci { font: italic 11px/1.2 Inter, sans-serif; color: var(--muted); }
-  .sq .tick { position: absolute; top: 6px; right: 6px; width: 22px; height: 22px; border: 2px solid var(--line); border-radius: 50%; background: var(--card); }
+  .sq .tick { position: absolute; top: 6px; right: 6px; width: 22px; height: 22px; border: 2px solid var(--line); border-radius: 50%; background: var(--card); display: grid; place-items: center; font: 700 14px/1 Inter, sans-serif; color: #fff; }
+  .sq { cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none; }
+  .sq.found img { filter: saturate(0.9) brightness(0.55); }
+  .sq.found .tick { width: 34px; height: 34px; background: var(--leaf); border-color: var(--leaf); font-size: 20px; }
+  .sq.found .label { background: color-mix(in srgb, var(--leaf) 16%, var(--card)); }
+  .sq .when { font-size: 10.5px; color: var(--leaf); font-weight: 600; }
+  .tally { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 12px; font: 600 16px/1.2 Inter, sans-serif; }
+  .tally button { background: transparent; color: var(--muted); border-color: var(--muted); font-size: 13px; padding: 6px 10px; }
 
   footer.notes { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; margin-top: 12px; font-size: 11.5px; color: var(--muted); }
   footer.notes strong { color: var(--ink); }
@@ -68,7 +75,10 @@
   @media print {
     :root { --paper: #fff; --card: #fff; --ink: #111; --muted: #444; --line: #222; }
     body { background: #fff; }
-    .controls { display: none; }
+    .controls, .tally { display: none; }
+    .sq.found img { filter: none; }
+    .sq.found .label { background: #fff; }
+    .sq .when { display: none; }
     .wrap { padding: 0; max-width: none; }
     .sheet { border: none; padding: 0; }
     .grid { grid-template-columns: repeat(4, 1fr); margin-top: 10px; }
@@ -86,7 +96,7 @@
   <div class="controls">
     <select id="town" aria-label="Town"></select>
     <button onclick="window.print()">Print the card</button>
-    <p>Print it, leave the phone at home, and go find what is on it.</p>
+    <p>Print it and leave the phone at home, or take it along and tap a square when you find it.</p>
   </div>
   <div class="sheet" id="sheet"></div>
 </div>
@@ -94,13 +104,35 @@
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
 
+// Finds are kept only in this browser: { taxon_id: ISO time it was tapped }.
+const storeKey = (name, card) => `nature-bingo:${name}:${card.year}`;
+function loadFound(key) {
+  try { return JSON.parse(localStorage.getItem(key)) || {}; } catch { return {}; }
+}
+function saveFound(key, found) {
+  try { localStorage.setItem(key, JSON.stringify(found)); } catch { /* private mode: marks last until the page closes */ }
+}
+const clock = iso => new Date(iso).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+
+function paintMarks(name, card, found) {
+  document.querySelectorAll(".sq").forEach(el => {
+    const t = found[el.dataset.id];
+    el.classList.toggle("found", !!t);
+    el.setAttribute("aria-pressed", t ? "true" : "false");
+    el.querySelector(".tick").textContent = t ? "✓" : "";
+    el.querySelector(".when").textContent = t ? `found ${clock(t)}` : "";
+  });
+  const n = Object.keys(found).length;
+  document.getElementById("count").textContent = `Found ${n} of ${card.squares.length}`;
+}
+
 function render(name, card) {
   const sheet = document.getElementById("sheet");
   const squares = card.squares.map(s => `
-    <div class="sq">
+    <div class="sq" role="button" tabindex="0" aria-pressed="false" data-id="${s.taxon_id}">
       ${s.photo ? `<img src="${esc(s.photo)}" alt="${esc(s.common || s.name)}">` : `<div class="noimg">no open photo</div>`}
       <span class="tick" aria-hidden="true"></span>
-      <div class="label"><div class="common">${esc(cap(s.common) || s.name)}</div><div class="sci">${esc(s.name)}</div></div>
+      <div class="label"><div class="common">${esc(cap(s.common) || s.name)}</div><div class="sci">${esc(s.name)}</div><div class="when"></div></div>
     </div>`).join("");
   const logged = card.backtest_2025_logged;
   const credits = card.squares.filter(s => s.photo_credit).map(s => `${esc(cap(s.common) || s.name)}: ${esc(s.photo_credit)}`).join(" · ");
@@ -109,6 +141,7 @@ function render(name, card) {
       <h1>Nature <span>Bingo</span></h1>
       <div class="where">${esc(name)}<small>October ${card.year} · within about 10 km</small></div>
     </header>
+    <div class="tally"><span id="count"></span><button type="button" id="clear">Clear marks</button></div>
     <div class="grid">${squares}</div>
     <footer class="notes">
       <div><strong>How this card was made.</strong> A tabular model (TabPFN, open weights, run on a laptop) ranked what
@@ -118,6 +151,25 @@ function render(name, card) {
       night-time things are under-counted.${logged != null ? ` When I ran the same method on last October, people photographed ${logged} of the 16 things on this town's card. The other ${16 - logged} went unphotographed, which is not the same as absent.` : ""}</div>
     </footer>
     <div class="credits">Photos from iNaturalist under their own open licences. ${credits}</div>`;
+
+  const key = storeKey(name, card);
+  let found = loadFound(key);
+  const toggle = el => {
+    const id = el.dataset.id;
+    if (found[id]) delete found[id]; else found[id] = new Date().toISOString();
+    saveFound(key, found);
+    paintMarks(name, card, found);
+  };
+  sheet.querySelectorAll(".sq").forEach(el => {
+    el.addEventListener("click", () => toggle(el));
+    el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(el); } });
+  });
+  document.getElementById("clear").onclick = () => {
+    if (!Object.keys(found).length || confirm("Clear every mark on this card?")) {
+      found = {}; saveFound(key, found); paintMarks(name, card, found);
+    }
+  };
+  paintMarks(name, card, found);
 }
 
 fetch("cards.json").then(r => r.json()).then(cards => {
