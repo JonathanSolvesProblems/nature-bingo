@@ -119,6 +119,20 @@ select { padding-right: var(--s5); }
 .credits { margin-top: var(--s4); font-size: 10px; line-height: 1.35; color: var(--ink-soft); }
 .state { padding: var(--s6) var(--s4); text-align: center; color: var(--ink-soft); }
 
+/* A walk someone really did with this card: kept apart from the tap marks, never edits the card. */
+.walk { margin-top: var(--s5); border-top: 1.5px solid var(--rule); padding-top: var(--s4); }
+.walk h2 { font: 400 var(--t-lg)/1.1 Shrikhand, Georgia, serif; margin: 0 0 var(--s1); }
+.walk .meta { color: var(--ink-soft); font-size: 13.5px; margin: 0 0 var(--s3); font-variant-numeric: tabular-nums; }
+.walk .score { font-size: var(--t-md); margin: 0 0 var(--s3); }
+.walk .score b { color: var(--dab-text); font-variant-numeric: tabular-nums; }
+.walk ul { margin: 0 0 var(--s3); padding-left: 1.1em; font-size: 14px; }
+.walk li span { color: var(--ink-soft); }
+.walk .photos { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--gap); margin-top: var(--s3); }
+.walk figure { margin: 0; }
+.walk figure img { width: 100%; height: 190px; object-fit: cover; border-radius: var(--r-tile); display: block; }
+.walk figcaption { font-size: var(--t-sm); color: var(--ink-soft); margin-top: var(--s1); }
+@media (max-width: 640px) { .walk .photos { grid-template-columns: 1fr; } }
+
 @keyframes drift { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @keyframes dab-land {
   0% { opacity: 0; transform: scale(1.35); }
@@ -159,6 +173,7 @@ select { padding-right: var(--s5); }
   .notes { font-size: 10px; gap: 14px; margin-top: 8px; }
   .notes h2 { font-size: 10px; }
   .credits { font-size: 7px; margin-top: 6px; }
+  .walk { display: none; }
 }
 </style>
 </head>
@@ -230,6 +245,21 @@ function paintMarks(card, found, justId) {
   if (justId) { n.classList.remove("bump"); void n.offsetWidth; n.classList.add("bump"); }
 }
 
+let walks = {};
+function walkHtml(w, total) {
+  const day = new Date(w.date + "T12:00").toLocaleDateString([], { weekday: "long", month: "long", day: "numeric" });
+  const li = (xs, label) => xs.map(x => `<li><b>${esc(x.name)}</b> ${label}, ${esc(x.when)} <span>· ${esc(x.note)}</span></li>`).join("");
+  return `
+    <section class="walk" aria-label="A walk with this card">
+      <h2>I walked this card</h2>
+      <p class="meta">${esc(day)}, ${esc(w.start)} to ${esc(w.end)} · ${esc(w.place)}</p>
+      <p class="score"><b>${w.confirmed.length} of ${total}</b> confirmed by photo${w.probable.length ? `, <b>${w.probable.length}</b> probable` : ""}.</p>
+      <ul>${li(w.confirmed, "confirmed")}${li(w.probable, "probable")}</ul>
+      ${w.off_card.length ? `<p class="meta">Not on the card: ${w.off_card.map(esc).join(", ")}.</p>` : ""}
+      <div class="photos">${w.photos.map(p => `<figure><img src="${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy"><figcaption>${esc(p.caption)}</figcaption></figure>`).join("")}</div>
+    </section>`;
+}
+
 function render(name, card) {
   const root = document.getElementById("card");
   const squares = card.squares.map((s, i) => `
@@ -261,7 +291,8 @@ function render(name, card) {
       <div><h2>What it cannot know</h2><p>It only knows what people photographed and logged. Shy, small and
       night-time things are under-counted.${logged != null ? ` When I ran the same method on last October, people photographed ${logged} of the ${total} things on this town's card. The other ${total - logged} went unphotographed, which is not the same as absent.` : ""}</p></div>
     </section>
-    <div class="credits">Photos from iNaturalist under their own open licences. ${credits}</div>`;
+    <div class="credits">Photos from iNaturalist under their own open licences. ${credits}</div>
+    ${(walks[name] || []).map(w => walkHtml(w, total)).join("")}`;
 
   const key = storeKey(name, card);
   let found = loadFound(key);
@@ -283,7 +314,10 @@ function render(name, card) {
   paintMarks(card, found, null);
 }
 
-fetch("cards.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(cards => {
+// Walks are optional: if the file is missing the card still renders.
+const walksReady = fetch("walks.json").then(r => r.ok ? r.json() : {}).catch(() => ({})).then(w => { walks = w; });
+
+Promise.all([fetch("cards.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }), walksReady]).then(([cards]) => {
   const sel = document.getElementById("town");
   const names = Object.keys(cards).sort();
   sel.innerHTML = names.map(n => `<option>${esc(n)}</option>`).join("");
