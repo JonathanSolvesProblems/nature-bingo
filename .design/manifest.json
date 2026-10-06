@@ -1,0 +1,40 @@
+{
+  "project": "nature-bingo",
+  "date": "2026-10-06",
+  "platform": "web-app (phone-first, used outdoors; one-page print)",
+  "family": "organic-soft",
+  "metaphor": "the bingo dauber: a find is dabbed with translucent ink, not checked",
+  "category_convention_avoided": "nature apps: white canvas, forest-green accent, rounded photo-on-top cards, pill buttons, leaf icons; bingo apps: primary colours and bubbly type",
+  "design_code": [
+    "Photos stay full colour and are never dimmed, because the card exists to help someone recognise the thing in the field.",
+    "The dab is purple (hue 282) because it must be the one colour the October landscape is not wearing, so a dab is never read as part of a photo.",
+    "Counts and times are tabular, because the time of each find is the record of the walk."
+  ],
+  "register": "warm, plain",
+  "expressive_axis": "ink: the translucent dab is the only loud element",
+  "themes": {
+    "home": "dark",
+    "dark": { "ground": "#1D1915", "raised": "#28221D", "ink": "#F1EBE2", "ink_soft": "#B9AE9F", "rule": "#3D352C", "dab": "#BE56EB", "dab_text": "#D9A2F3" },
+    "light": { "ground": "#ECEFE3", "raised": "#F8F9F2", "ink": "#231F1A", "ink_soft": "#5A544A", "rule": "#C9CEBD", "dab": "#8E2BC4", "dab_text": "#7A21AC" }
+  },
+  "type": {
+    "display": "Shrikhand (wordmark and tally only)",
+    "body": "Lexend 400/500/600",
+    "figures": "Lexend tabular-nums",
+    "mono": "none",
+    "scale_ratio": 1.25,
+    "body_px": 15
+  },
+  "structure": "one card: header strip (wordmark, place, tally) over a 4x4 bingo grid (2 columns under 640px), notes below",
+  "edge": { "tile_radius_px": 12, "card_radius_px": 20, "gap_px": 8, "concentric": "card radius = tile radius + gap" },
+  "depth": "flat tiles on the ground; the dab is translucent ink with a soft wet edge; no shadows",
+  "ornament": "the photographs plus the dab marks",
+  "motion": {
+    "explains": "a find was recorded; the tally changed",
+    "signature": "the dab lands: scale 1.35 to 0.94 to 1 with a gentle overshoot over 420ms, ink opacity rises as it lands",
+    "load": "tiles drift up 6px and settle, 24ms stagger",
+    "resting": "still",
+    "reduced_motion": "dab appears instantly, no drift"
+  },
+  "numerals": "tabular; times as h:mm am/pm; tally as N of 16"
+}

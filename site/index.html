@@ -1,108 +1,211 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nature Bingo</title>
-<meta name="description" content="A printable bingo card of what is most likely out this October near your town. Print it, leave the phone at home, go find it.">
+<meta name="description" content="A bingo card of the 16 things most likely out this October near your town, ranked by an open model from iNaturalist records. Take it on a walk and dab what you find.">
+<meta name="theme-color" content="#1D1915">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Lexend:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  // Apply a saved theme before first paint so the page never flashes the wrong polarity.
+  try { const t = localStorage.getItem("nature-bingo:theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+</script>
 <style>
-  :root {
-    --paper: #f6f1e4;
-    --ink: #22261c;
-    --muted: #6b6a58;
-    --line: #2f3a24;
-    --leaf: #b5531c;
-    --moss: #4f6a2c;
-    --card: #fffdf6;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --paper: #1b1d16; --ink: #ece6d3; --muted: #a9a58e; --line: #c9c2a6;
-      --leaf: #e08a4f; --moss: #9dbb6a; --card: #24271d;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--paper); color: var(--ink);
-    font: 15px/1.5 Inter, system-ui, sans-serif;
-  }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
-  .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; }
-  .controls p { margin: 0; flex: 1 1 320px; color: var(--muted); }
-  select, button {
-    font: inherit; padding: 9px 14px; border-radius: 8px; border: 1.5px solid var(--line);
-    background: var(--card); color: var(--ink);
-  }
-  button { background: var(--moss); color: #fff; border-color: var(--moss); font-weight: 600; cursor: pointer; }
+/*
+  Design code (see .design/manifest.json)
+  Avoiding: the nature-app house style (white canvas, forest-green accent, rounded photo-on-top cards,
+  pill buttons, leaf icons) and the bingo-app look (primary colours, bubbly type).
+  Metaphor: the bingo dauber. A find is dabbed with translucent ink, not checked.
+  - Photos stay full colour and are never dimmed, because the card exists to help someone recognise the thing.
+  - The dab is purple (hue 282) because it is the one colour the October landscape is not wearing,
+    so a dab is never read as part of a photo. It appears on dabs and the tally only.
+  - Counts and times are tabular, because the time of each find is the record of the walk.
+*/
+:root, :root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #1D1915;
+  --raised: #28221D;
+  --ink: #F1EBE2;
+  --ink-soft: #B9AE9F;
+  --rule: #3D352C;
+  --dab: #BE56EB;
+  --dab-text: #D9A2F3;
+  --dab-opacity: 0.85;
+  --dab-blend: multiply;
+  --focus: #F1EBE2;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --ground: #ECEFE3;
+  --raised: #F8F9F2;
+  --ink: #231F1A;
+  --ink-soft: #5A544A;
+  --rule: #C9CEBD;
+  --dab: #8E2BC4;
+  --dab-text: #7A21AC;
+  --dab-opacity: 0.62;
+  --dab-blend: multiply;
+  --focus: #231F1A;
+}
+:root {
+  --r-tile: 12px;
+  --gap: 8px;
+  --r-card: calc(var(--r-tile) + var(--gap));
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px;
+  --t-sm: 12px; --t-base: 15px; --t-md: 18.75px; --t-lg: 23.4px; --t-xl: 36.6px; --t-xxl: 57.2px; /* ratio 1.25 */
+  --ease-settle: cubic-bezier(.34, 1.36, .52, 1);
+}
+* { box-sizing: border-box; }
+html { background: var(--ground); }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font: 400 var(--t-base)/1.5 Lexend, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 920px; margin: 0 auto; padding: var(--s5) var(--s4) var(--s6); }
 
-  .sheet { background: var(--card); border: 2px solid var(--line); border-radius: 6px; padding: 22px 22px 16px; }
-  header.top { display: flex; justify-content: space-between; align-items: end; gap: 16px; border-bottom: 2px solid var(--line); padding-bottom: 10px; }
-  h1 { font: 700 40px/1 Fraunces, Georgia, serif; margin: 0; letter-spacing: -0.5px; }
-  h1 span { color: var(--leaf); }
-  .where { text-align: right; font: 500 18px/1.2 Fraunces, Georgia, serif; }
-  .where small { display: block; font: 12px Inter, sans-serif; color: var(--muted); }
+/* Controls */
+.controls { display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; margin-bottom: var(--s4); }
+select, .btn {
+  font: 500 var(--t-base)/1 Lexend, sans-serif; min-height: 44px; padding: 0 var(--s4);
+  border-radius: var(--r-tile); border: 1.5px solid var(--rule); background: var(--raised); color: var(--ink);
+}
+select { padding-right: var(--s5); }
+.btn { cursor: pointer; }
+.btn.quiet { background: transparent; color: var(--ink-soft); }
+.controls .spacer { flex: 1; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 
-  .grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1.5px solid var(--line); margin-top: 14px; }
-  .sq { --img-h: 170px; position: relative; border: 1px solid var(--line); display: flex; flex-direction: column; }
-  .sq img { width: 100%; height: var(--img-h); flex: none; object-fit: cover; filter: saturate(0.9); display: block; }
-  .sq .noimg { height: var(--img-h); flex: none; display: grid; place-items: center; color: var(--muted); font-size: 12px; }
-  .sq .label { flex: 1 1 auto; padding: 5px 7px 6px; background: var(--card); border-top: 1px solid var(--line); }
-  .sq .common { font: 600 13px/1.15 Inter, sans-serif; }
-  .sq .sci { font: italic 11px/1.2 Inter, sans-serif; color: var(--muted); }
-  .sq .tick { position: absolute; top: 6px; right: 6px; width: 22px; height: 22px; border: 2px solid var(--line); border-radius: 50%; background: var(--card); display: grid; place-items: center; font: 700 14px/1 Inter, sans-serif; color: #fff; }
-  .sq { cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none; }
-  .sq.found img { filter: saturate(0.9) brightness(0.55); }
-  .sq.found .tick { width: 34px; height: 34px; background: var(--leaf); border-color: var(--leaf); font-size: 20px; }
-  .sq.found .label { background: color-mix(in srgb, var(--leaf) 16%, var(--card)); }
-  .sq .when { font-size: 10.5px; color: var(--leaf); font-weight: 600; }
-  .tally { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 12px; font: 600 16px/1.2 Inter, sans-serif; }
-  .tally button { background: transparent; color: var(--muted); border-color: var(--muted); font-size: 13px; padding: 6px 10px; }
+/* Card */
+.card { background: var(--raised); border-radius: var(--r-card); padding: var(--s5); }
+.head { display: grid; grid-template-columns: 1fr auto; gap: var(--s3) var(--s5); align-items: end; }
+.wordmark { font: 400 var(--t-xl)/0.95 Shrikhand, Georgia, serif; margin: 0; letter-spacing: 0.2px; }
+.place { margin: var(--s2) 0 0; color: var(--ink-soft); font-size: var(--t-base); }
+.place b { color: var(--ink); font-weight: 600; }
+.tally { text-align: right; font-variant-numeric: tabular-nums; }
+.tally .n { font: 400 var(--t-xxl)/0.9 Shrikhand, Georgia, serif; color: var(--dab-text); display: inline-block; }
+.tally .of { display: block; color: var(--ink-soft); font-size: var(--t-sm); margin-top: var(--s1); }
+.tally .n.bump { animation: bump 360ms var(--ease-settle); }
+.hint { margin: var(--s4) 0 var(--s3); color: var(--ink-soft); font-size: var(--t-sm); display: flex; justify-content: space-between; align-items: center; gap: var(--s3); }
+.btn.small { font-size: var(--t-sm); padding: 0 var(--s3); }
 
-  footer.notes { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; margin-top: 12px; font-size: 11.5px; color: var(--muted); }
-  footer.notes strong { color: var(--ink); }
-  .credits { font-size: 8.5px; line-height: 1.3; color: var(--muted); margin-top: 10px; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+.sq {
+  position: relative; display: flex; flex-direction: column; border-radius: var(--r-tile); overflow: hidden;
+  background: var(--ground); cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none;
+  animation: drift 520ms var(--ease-settle) both; animation-delay: calc(var(--i) * 24ms);
+}
+.sq .photo { position: relative; height: 170px; flex: none; }
+.sq img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sq .noimg { height: 100%; display: grid; place-items: center; color: var(--ink-soft); font-size: var(--t-sm); }
+.sq .dab {
+  position: absolute; left: 50%; top: 50%; width: 70%; aspect-ratio: 1; translate: -50% -50%;
+  opacity: 0; pointer-events: none; mix-blend-mode: var(--dab-blend);
+}
+.sq .dab path { fill: var(--dab); }
+.sq.found .dab { opacity: var(--dab-opacity); }
+.sq.found.just .dab { animation: dab-land 420ms var(--ease-settle); }
+.sq .label { padding: var(--s2) var(--s3) var(--s3); flex: 1; }
+.sq .common { font: 600 14px/1.2 Lexend, sans-serif; }
+.sq .sci { font-size: 11.5px; line-height: 1.25; color: var(--ink-soft); font-style: italic; }
+.sq .when { font: 600 var(--t-sm)/1.3 Lexend, sans-serif; color: var(--dab-text); font-variant-numeric: tabular-nums; min-height: 1.3em; margin-top: 2px; }
 
-  .refusal { margin-top: 14px; padding: 18px; border: 2px dashed var(--line); border-radius: 6px; }
+.notes { display: grid; grid-template-columns: 1.25fr 1fr; gap: var(--s5); margin-top: var(--s5); font-size: 13.5px; color: var(--ink-soft); }
+.notes h2 { font: 600 13.5px/1.4 Lexend, sans-serif; color: var(--ink); margin: 0 0 var(--s1); }
+.notes p { margin: 0; }
+.credits { margin-top: var(--s4); font-size: 10px; line-height: 1.35; color: var(--ink-soft); }
+.state { padding: var(--s6) var(--s4); text-align: center; color: var(--ink-soft); }
 
-  @media (max-width: 640px) {
-    h1 { font-size: 30px; }
-    .grid { grid-template-columns: repeat(2, 1fr); }
-    footer.notes { grid-template-columns: 1fr; }
-  }
-  @page { size: letter; margin: 0.4in; }
-  @media print {
-    :root { --paper: #fff; --card: #fff; --ink: #111; --muted: #444; --line: #222; }
-    body { background: #fff; }
-    .controls, .tally { display: none; }
-    .sq.found img { filter: none; }
-    .sq.found .label { background: #fff; }
-    .sq .when { display: none; }
-    .wrap { padding: 0; max-width: none; }
-    .sheet { border: none; padding: 0; }
-    .grid { grid-template-columns: repeat(4, 1fr); margin-top: 10px; }
-    .sq { --img-h: 1.45in; break-inside: avoid; }
-    .sq .common { font-size: 11.5px; }
-    .sq .sci { font-size: 9.5px; }
-    h1 { font-size: 34px; }
-    footer.notes { font-size: 10px; margin-top: 8px; }
-    .credits { font-size: 7px; margin-top: 6px; }
-  }
+@keyframes drift { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes dab-land {
+  0% { opacity: 0; transform: scale(1.35); }
+  55% { opacity: var(--dab-opacity); transform: scale(0.94); }
+  100% { opacity: var(--dab-opacity); transform: scale(1); }
+}
+@keyframes bump { 0% { transform: scale(1); } 40% { transform: scale(1.18); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .sq, .sq.found.just .dab, .tally .n.bump { animation: none; }
+}
+
+@media (max-width: 640px) {
+  .wrap { padding-top: var(--s4); }
+  .card { padding: var(--s4); }
+  .wordmark { font-size: 30px; }
+  .tally .n { font-size: var(--t-xl); }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .sq .photo { height: 150px; }
+  .notes { grid-template-columns: 1fr; gap: var(--s4); }
+}
+
+@page { size: letter; margin: 0.4in; }
+@media print {
+  :root, :root[data-theme] { color-scheme: light; --ground: #fff; --raised: #fff; --ink: #111; --ink-soft: #444; --rule: #bbb;
+    --dab: #8E2BC4; --dab-text: #7A21AC; --dab-opacity: .6; --dab-blend: multiply; }
+  html, body { background: #fff !important; }
+  .controls, .hint, .tally { display: none; }
+  .wrap { padding: 0; max-width: none; }
+  .card { padding: 0; }
+  .wordmark { font-size: 30px; }
+  .grid { grid-template-columns: repeat(4, 1fr); gap: 5px; margin-top: 10px; }
+  .sq { animation: none; break-inside: avoid; border: 1px solid #bbb; border-radius: 8px; }
+  .sq .photo { height: 1.3in; }
+  .sq .label { padding: 4px 8px 5px; }
+  .sq .common { font-size: 11.5px; }
+  .sq .sci { font-size: 9.5px; }
+  .sq .when { display: none; }
+  .notes { font-size: 10px; gap: 14px; margin-top: 8px; }
+  .notes h2 { font-size: 10px; }
+  .credits { font-size: 7px; margin-top: 6px; }
+}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="controls">
     <select id="town" aria-label="Town"></select>
-    <button onclick="window.print()">Print the card</button>
-    <p>Print it and leave the phone at home, or take it along and tap a square when you find it.</p>
+    <button class="btn" type="button" onclick="window.print()">Print</button>
+    <span class="spacer"></span>
+    <button class="btn quiet" type="button" id="theme" aria-label="Switch light or dark">Light</button>
   </div>
-  <div class="sheet" id="sheet"></div>
+  <main class="card" id="card"><div class="state">Laying out the card…</div></main>
 </div>
 <script>
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
+
+// Theme: dark by default, light on request, choice kept in this browser.
+const themeBtn = document.getElementById("theme");
+const paintThemeBtn = () => { themeBtn.textContent = document.documentElement.dataset.theme === "light" ? "Dark" : "Light"; };
+themeBtn.onclick = () => {
+  const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("nature-bingo:theme", next); } catch {}
+  document.querySelector('meta[name="theme-color"]').content = next === "light" ? "#ECEFE3" : "#1D1915";
+  paintThemeBtn();
+};
+paintThemeBtn();
+
+// Each square gets its own ink blob, seeded by the species id so it never changes between visits.
+function dabPath(seed) {
+  let x = seed % 2147483647 || 1;
+  const rand = () => (x = (x * 48271) % 2147483647) / 2147483647;
+  const n = 11, pts = [];
+  for (let i = 0; i < n; i++) {
+    const a = (i / n) * Math.PI * 2, r = 36 + rand() * 12;
+    pts.push([50 + Math.cos(a) * r, 50 + Math.sin(a) * r]);
+  }
+  let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+  for (let i = 0; i < n; i++) {
+    const p0 = pts[(i - 1 + n) % n], p1 = pts[i], p2 = pts[(i + 1) % n], p3 = pts[(i + 2) % n];
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+    const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += `C${c1.map(v => v.toFixed(1))} ${c2.map(v => v.toFixed(1))} ${p2.map(v => v.toFixed(1))}`;
+  }
+  return d + "Z";
+}
 
 // Finds are kept only in this browser: { taxon_id: ISO time it was tapped }.
 const storeKey = (name, card) => `nature-bingo:${name}:${card.year}`;
@@ -114,42 +217,50 @@ function saveFound(key, found) {
 }
 const clock = iso => new Date(iso).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
 
-function paintMarks(name, card, found) {
+function paintMarks(card, found, justId) {
   document.querySelectorAll(".sq").forEach(el => {
     const t = found[el.dataset.id];
     el.classList.toggle("found", !!t);
+    el.classList.toggle("just", el.dataset.id === justId && !!t);
     el.setAttribute("aria-pressed", t ? "true" : "false");
-    el.querySelector(".tick").textContent = t ? "✓" : "";
     el.querySelector(".when").textContent = t ? `found ${clock(t)}` : "";
   });
-  const n = Object.keys(found).length;
-  document.getElementById("count").textContent = `Found ${n} of ${card.squares.length}`;
+  const n = document.getElementById("n");
+  n.textContent = Object.keys(found).length;
+  if (justId) { n.classList.remove("bump"); void n.offsetWidth; n.classList.add("bump"); }
 }
 
 function render(name, card) {
-  const sheet = document.getElementById("sheet");
-  const squares = card.squares.map(s => `
-    <div class="sq" role="button" tabindex="0" aria-pressed="false" data-id="${s.taxon_id}">
-      ${s.photo ? `<img src="${esc(s.photo)}" alt="${esc(s.common || s.name)}">` : `<div class="noimg">no open photo</div>`}
-      <span class="tick" aria-hidden="true"></span>
+  const root = document.getElementById("card");
+  const squares = card.squares.map((s, i) => `
+    <div class="sq" role="button" tabindex="0" aria-pressed="false" data-id="${s.taxon_id}" style="--i:${i}"
+         aria-label="${esc(cap(s.common) || s.name)}">
+      <div class="photo">
+        ${s.photo ? `<img src="${esc(s.photo)}" alt="" loading="${i < 8 ? "eager" : "lazy"}">` : `<div class="noimg">no open photo</div>`}
+        <svg class="dab" viewBox="0 0 100 100" aria-hidden="true"><path d="${dabPath(s.taxon_id)}"/></svg>
+      </div>
       <div class="label"><div class="common">${esc(cap(s.common) || s.name)}</div><div class="sci">${esc(s.name)}</div><div class="when"></div></div>
     </div>`).join("");
   const logged = card.backtest_2025_logged;
+  const total = card.squares.length;
   const credits = card.squares.filter(s => s.photo_credit).map(s => `${esc(cap(s.common) || s.name)}: ${esc(s.photo_credit)}`).join(" · ");
-  sheet.innerHTML = `
-    <header class="top">
-      <h1>Nature <span>Bingo</span></h1>
-      <div class="where">${esc(name)}<small>October ${card.year} · within about 10 km</small></div>
+  root.innerHTML = `
+    <header class="head">
+      <div>
+        <h1 class="wordmark">Nature Bingo</h1>
+        <p class="place"><b>${esc(name)}</b> · October ${card.year} · within about 10 km</p>
+      </div>
+      <div class="tally" aria-live="polite"><span class="n" id="n">0</span><span class="of">of ${total} found</span></div>
     </header>
-    <div class="tally"><span id="count"></span><button type="button" id="clear">Clear marks</button></div>
+    <div class="hint"><span>Tap a square when you find it. Tap again to undo.</span><button class="btn quiet small" type="button" id="clear">Clear marks</button></div>
     <div class="grid">${squares}</div>
-    <footer class="notes">
-      <div><strong>How this card was made.</strong> A tabular model (TabPFN, open weights, run on a laptop) ranked what
-      iNaturalist users have photographed near here and across the region in past Octobers. These are the 16 things it
-      thinks you are most likely to find this month.</div>
-      <div><strong>What it cannot know.</strong> It only knows what people photographed and logged. Shy, small and
-      night-time things are under-counted.${logged != null ? ` When I ran the same method on last October, people photographed ${logged} of the 16 things on this town's card. The other ${16 - logged} went unphotographed, which is not the same as absent.` : ""}</div>
-    </footer>
+    <section class="notes">
+      <div><h2>How this card was made</h2><p>A tabular model (TabPFN, open weights, run on a laptop) ranked what
+      iNaturalist users have photographed near here and across the region in past Octobers. These are the ${total} things it
+      thinks you are most likely to find this month.</p></div>
+      <div><h2>What it cannot know</h2><p>It only knows what people photographed and logged. Shy, small and
+      night-time things are under-counted.${logged != null ? ` When I ran the same method on last October, people photographed ${logged} of the ${total} things on this town's card. The other ${total - logged} went unphotographed, which is not the same as absent.` : ""}</p></div>
+    </section>
     <div class="credits">Photos from iNaturalist under their own open licences. ${credits}</div>`;
 
   const key = storeKey(name, card);
@@ -158,21 +269,21 @@ function render(name, card) {
     const id = el.dataset.id;
     if (found[id]) delete found[id]; else found[id] = new Date().toISOString();
     saveFound(key, found);
-    paintMarks(name, card, found);
+    paintMarks(card, found, id);
   };
-  sheet.querySelectorAll(".sq").forEach(el => {
+  root.querySelectorAll(".sq").forEach(el => {
     el.addEventListener("click", () => toggle(el));
     el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(el); } });
   });
   document.getElementById("clear").onclick = () => {
     if (!Object.keys(found).length || confirm("Clear every mark on this card?")) {
-      found = {}; saveFound(key, found); paintMarks(name, card, found);
+      found = {}; saveFound(key, found); paintMarks(card, found, null);
     }
   };
-  paintMarks(name, card, found);
+  paintMarks(card, found, null);
 }
 
-fetch("cards.json").then(r => r.json()).then(cards => {
+fetch("cards.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(cards => {
   const sel = document.getElementById("town");
   const names = Object.keys(cards).sort();
   sel.innerHTML = names.map(n => `<option>${esc(n)}</option>`).join("");
@@ -181,6 +292,8 @@ fetch("cards.json").then(r => r.json()).then(cards => {
   const go = () => { render(sel.value, cards[sel.value]); history.replaceState(null, "", `?town=${encodeURIComponent(sel.value)}`); };
   sel.onchange = go;
   go();
+}).catch(() => {
+  document.getElementById("card").innerHTML = `<div class="state">The card could not load. Check the connection and reload; anything you already marked is still saved on this phone.</div>`;
 });
 </script>
 </body>
