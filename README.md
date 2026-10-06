@@ -2,9 +2,9 @@
 
 A bingo card of the 16 things most likely to be out near your town this October. Open it, put the phone away, and go find them. Tap a square when you do, or print the card.
 
-**[Open the app](https://naturebingo.vercel.app)** · [Demo video](https://www.youtube.com/watch?v=Xo2zRxRYsWE) · [Short](https://www.youtube.com/shorts/UwPOgILmLak) · [Write-up](https://jonathanandrei.com/blog/nature-bingo-printable-card-tabpfn-inaturalist/) · [My walk on iNaturalist](https://www.inaturalist.org/observations/jonathansolvesproblems)
+**[Open the app](https://naturebingo.vercel.app)** · [DEV post](https://dev.to/jonathansolvesstuff/i-walked-an-open-models-bingo-card-through-a-town-with-almost-no-nature-records-i-found-2-of-16-649) · [Demo video](https://www.youtube.com/watch?v=Xo2zRxRYsWE) · [Short](https://www.youtube.com/shorts/UwPOgILmLak) · [Blog](https://jonathanandrei.com/blog/nature-bingo-printable-card-tabpfn-inaturalist/) · [My walk on iNaturalist](https://www.inaturalist.org/observations/jonathansolvesproblems)
 
-Built for the DEV Hacktoberfest Open-Source AI Challenge, Week 1: Touch Grass.
+Built for the DEV Hacktoberfest Open-Source AI Challenge, Week 1: Touch Grass. [Submission post](https://dev.to/jonathansolvesstuff/i-walked-an-open-models-bingo-card-through-a-town-with-almost-no-nature-records-i-found-2-of-16-649).
 
 ## Why small towns
 
