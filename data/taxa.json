@@ -142,5 +142,1076 @@
   "photo_credit": "(c) Anita, some rights reserved (CC BY-NC)",
   "photo_license": "cc-by-nc",
   "wikipedia": "https://en.wikipedia.org/wiki/Tilia americana"
+ },
+ "61119": {
+  "name": "Ilex verticillata",
+  "common": "winterberry holly",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/53818150/medium.jpg",
+  "photo_credit": "(c) Paul Donahue, some rights reserved (CC BY-NC), uploaded by Paul Donahue",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ilex verticillata"
+ },
+ "54781": {
+  "name": "Quercus macrocarpa",
+  "common": "bur oak",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/22786993/medium.jpeg",
+  "photo_credit": "(c) rayrob, some rights reserved (CC BY-NC), uploaded by rayrob",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Quercus macrocarpa"
+ },
+ "54037": {
+  "name": "Thuja occidentalis",
+  "common": "northern whitecedar",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/4684247/medium.jpeg",
+  "photo_credit": "(c) Donna Pomeroy, some rights reserved (CC BY-NC), uploaded by Donna Pomeroy",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Thuja occidentalis"
+ },
+ "55620": {
+  "name": "Solanum dulcamara",
+  "common": "bittersweet nightshade",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/70860715/medium.jpeg",
+  "photo_credit": "(c) Alexander Baransky, some rights reserved (CC BY-NC), uploaded by Alexander Baransky",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Solanum dulcamara"
+ },
+ "65979": {
+  "name": "Lithobates catesbeianus",
+  "common": "American Bullfrog",
+  "iconic": "Amphibia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/519633752/medium.jpg",
+  "photo_credit": "(c) Jag Athwal, some rights reserved (CC BY-NC), uploaded by Jag Athwal",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lithobates catesbeianus"
+ },
+ "27186": {
+  "name": "Plethodon cinereus",
+  "common": "Eastern Red-backed Salamander",
+  "iconic": "Amphibia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/248530577/medium.jpg",
+  "photo_credit": "(c) Ty Smith, some rights reserved (CC BY-NC), uploaded by Ty Smith",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Plethodon cinereus"
+ },
+ "48098": {
+  "name": "Acer rubrum",
+  "common": "red maple",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/371065093/medium.jpg",
+  "photo_credit": "no rights reserved, uploaded by mefisher",
+  "photo_license": "cc0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Acer rubrum"
+ },
+ "58721": {
+  "name": "Larix laricina",
+  "common": "tamarack",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/28897/medium.jpg",
+  "photo_credit": "(c) Eli Sagor, some rights reserved (CC BY-NC)",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Larix laricina"
+ },
+ "53041": {
+  "name": "Kalmia angustifolia",
+  "common": "sheep laurel",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/44474782/medium.jpg",
+  "photo_credit": "(c) Brian Hendrix, some rights reserved (CC BY-NC-ND), uploaded by Brian Hendrix",
+  "photo_license": "cc-by-nc-nd",
+  "wikipedia": "https://en.wikipedia.org/wiki/Kalmia angustifolia"
+ },
+ "117443": {
+  "name": "Symphyotrichum novae-angliae",
+  "common": "New England aster",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/52293886/medium.jpg",
+  "photo_credit": "(c) musicmanz, some rights reserved (CC BY-NC), uploaded by musicmanz",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Symphyotrichum novae-angliae"
+ },
+ "180413": {
+  "name": "Rhododendron groenlandicum",
+  "common": "Bog Labrador Tea",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/44570815/medium.jpeg",
+  "photo_credit": "no rights reserved, uploaded by agbelliveau",
+  "photo_license": "cc0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rhododendron groenlandicum"
+ },
+ "54860": {
+  "name": "Ulmus rubra",
+  "common": "slippery elm",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/19572287/medium.jpeg",
+  "photo_credit": "(c) Zihao Wang, some rights reserved (CC BY), uploaded by Zihao Wang",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ulmus rubra"
+ },
+ "132767": {
+  "name": "Chamaedaphne calyculata",
+  "common": "leatherleaf",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/1945720/medium.JPG",
+  "photo_credit": "(c) aarongunnar, some rights reserved (CC BY), uploaded by aarongunnar",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Chamaedaphne calyculata"
+ },
+ "4956": {
+  "name": "Ardea herodias",
+  "common": "Great Blue Heron",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/65060931/medium.jpg",
+  "photo_credit": "(c) Dan Roach, some rights reserved (CC BY-NC), uploaded by Dan Roach",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ardea herodias"
+ },
+ "52757": {
+  "name": "Polistes fuscatus",
+  "common": "Northern Paper Wasp",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/92100442/medium.jpg",
+  "photo_credit": "(c) Alex Shure, some rights reserved (CC BY-NC), uploaded by Alex Shure",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Polistes fuscatus"
+ },
+ "66003": {
+  "name": "Lithobates pipiens",
+  "common": "Northern Leopard Frog",
+  "iconic": "Amphibia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/1304/medium.jpg",
+  "photo_credit": "(c) Stylurus, some rights reserved (CC BY-NC-ND)",
+  "photo_license": "cc-by-nc-nd",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lithobates pipiens"
+ },
+ "59675": {
+  "name": "Pyrrharctia isabella",
+  "common": "Isabella Tiger Moth",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/725864880/medium.jpg",
+  "photo_credit": "(c) michaeldhallett, some rights reserved (CC BY-NC), uploaded by michaeldhallett",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Pyrrharctia isabella"
+ },
+ "12727": {
+  "name": "Turdus migratorius",
+  "common": "American Robin",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/34859026/medium.jpg",
+  "photo_credit": "(c) John D Reynolds, some rights reserved (CC BY-NC), uploaded by John D Reynolds",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Turdus migratorius"
+ },
+ "9100": {
+  "name": "Melospiza melodia",
+  "common": "Song Sparrow",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/104749271/medium.jpg",
+  "photo_credit": "(c) Ad Konings, some rights reserved (CC BY-NC), uploaded by Ad Konings",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Melospiza melodia"
+ },
+ "46217": {
+  "name": "Tamias striatus",
+  "common": "Eastern Chipmunk",
+  "iconic": "Mammalia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/2211106/medium.JPG",
+  "photo_credit": "(c) Mike Leveille, some rights reserved (CC BY-NC), uploaded by Mike Leveille",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Tamias striatus"
+ },
+ "144815": {
+  "name": "Poecile atricapillus",
+  "common": "Black-capped Chickadee",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/178279576/medium.jpg",
+  "photo_credit": "(c) Kent Ross, some rights reserved (CC BY-NC), uploaded by Kent Ross",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Poecile atricapillus"
+ },
+ "52391": {
+  "name": "Pinus strobus",
+  "common": "eastern white pine",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/638440764/medium.jpg",
+  "photo_credit": "(c) Forest and Kim Starr, some rights reserved (CC BY)",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Pinus strobus"
+ },
+ "48734": {
+  "name": "Tsuga canadensis",
+  "common": "eastern hemlock",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/400071107/medium.jpeg",
+  "photo_credit": "(c) jaskir, some rights reserved (CC BY-NC), uploaded by jaskir",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Tsuga canadensis"
+ },
+ "46260": {
+  "name": "Tamiasciurus hudsonicus",
+  "common": "American Red Squirrel",
+  "iconic": "Mammalia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/113299756/medium.jpg",
+  "photo_credit": "(c) jmarcinik, some rights reserved (CC BY-NC), uploaded by jmarcinik",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Tamiasciurus hudsonicus"
+ },
+ "49005": {
+  "name": "Quercus rubra",
+  "common": "northern red oak",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/96523422/medium.jpeg",
+  "photo_credit": "(c) ssimeto, some rights reserved (CC BY-NC)",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Quercus rubra"
+ },
+ "47911": {
+  "name": "Asclepias syriaca",
+  "common": "common milkweed",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/99923276/medium.jpg",
+  "photo_credit": "(c) csozanne, some rights reserved (CC BY-NC)",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Asclepias syriaca"
+ },
+ "39858": {
+  "name": "Graptemys geographica",
+  "common": "Northern Map Turtle",
+  "iconic": "Reptilia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/13212543/medium.jpg",
+  "photo_credit": "(c) Peter Paplanus, some rights reserved (CC BY)",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Graptemys geographica"
+ },
+ "1661279": {
+  "name": "Pantherophis alleghaniensis",
+  "common": "Central Ratsnake",
+  "iconic": "Reptilia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/631968885/medium.jpg",
+  "photo_credit": "(c) Zane Fish, some rights reserved (CC BY-NC), uploaded by Zane Fish",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Gray_ratsnake"
+ },
+ "52354": {
+  "name": "Ambystoma laterale",
+  "common": "Blue-spotted Salamander",
+  "iconic": "Amphibia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/78166204/medium.jpg",
+  "photo_credit": "(c) Se\u00e1n\u00edn \u00d3g, some rights reserved (CC BY-NC-ND)",
+  "photo_license": "cc-by-nc-nd",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ambystoma laterale"
+ },
+ "1668923": {
+  "name": "Dryophytes versicolor",
+  "common": "Gray Treefrog",
+  "iconic": "Amphibia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/40622/medium.jpg",
+  "photo_credit": "(c) Todd Pierson, some rights reserved (CC BY-NC-SA)",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Gray_treefrog"
+ },
+ "64968": {
+  "name": "Anaxyrus americanus",
+  "common": "American Toad",
+  "iconic": "Amphibia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/130773208/medium.jpg",
+  "photo_credit": "(c) Alex Shure, some rights reserved (CC BY-NC), uploaded by Alex Shure",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Anaxyrus americanus"
+ },
+ "28562": {
+  "name": "Storeria dekayi",
+  "common": "DeKay's Brownsnake",
+  "iconic": "Reptilia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/64749622/medium.jpg",
+  "photo_credit": "(c) Chris Gruenwald Herp.mx, some rights reserved (CC BY-NC), uploaded by Chris Gruenwald Herp.mx",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Storeria dekayi"
+ },
+ "10094": {
+  "name": "Junco hyemalis",
+  "common": "Dark-eyed Junco",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/111714701/medium.jpeg",
+  "photo_credit": "(c) Craig K. Hunt, some rights reserved (CC BY-NC), uploaded by Craig K. Hunt",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Junco hyemalis"
+ },
+ "83799": {
+  "name": "Mitchella repens",
+  "common": "partridgeberry",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/40064/medium.jpg",
+  "photo_credit": "(c) Patrick Coin, some rights reserved (CC BY-NC-SA)",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mitchella repens"
+ },
+ "54924": {
+  "name": "Medeola virginiana",
+  "common": "Cucumber Root",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/81800/medium.jpg",
+  "photo_credit": "(c) zen Sutherland, some rights reserved (CC BY-NC-SA)",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Medeola virginiana"
+ },
+ "54261": {
+  "name": "Abies balsamea",
+  "common": "balsam fir",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/9906794/medium.jpg",
+  "photo_credit": "(c) Jenn Megyesi, some rights reserved (CC BY-NC), uploaded by Jenn Megyesi",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Abies balsamea"
+ },
+ "82576": {
+  "name": "Onoclea sensibilis",
+  "common": "sensitive fern",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/200080819/medium.jpg",
+  "photo_credit": "(c) Laura Clark, some rights reserved (CC BY), uploaded by Laura Clark",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Onoclea sensibilis"
+ },
+ "1002684": {
+  "name": "Osmunda spectabilis",
+  "common": "American Royal Fern",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/127317399/medium.jpeg",
+  "photo_credit": "(c) Janet Wright, some rights reserved (CC BY-NC), uploaded by Janet Wright",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Osmunda_spectabilis"
+ },
+ "46017": {
+  "name": "Sciurus carolinensis",
+  "common": "Eastern Gray Squirrel",
+  "iconic": "Mammalia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/22144449/medium.jpg",
+  "photo_credit": "(c) Diliff, some rights reserved (CC BY-SA)",
+  "photo_license": "cc-by-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sciurus carolinensis"
+ },
+ "8229": {
+  "name": "Cyanocitta cristata",
+  "common": "Blue Jay",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/530721418/medium.jpg",
+  "photo_credit": "(c) Judy Gallagher, some rights reserved (CC BY)",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cyanocitta cristata"
+ },
+ "775410": {
+  "name": "Fomitopsis betulina",
+  "common": "birch polypore",
+  "iconic": "Fungi",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/332872409/medium.jpg",
+  "photo_credit": "(c) Bill MacIndewar, some rights reserved (CC BY-NC), uploaded by Bill MacIndewar",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Fomitopsis betulina"
+ },
+ "558426": {
+  "name": "Anser caerulescens",
+  "common": "Snow Goose",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/467051457/medium.jpg",
+  "photo_credit": "(c) Miguel A Mejias, PhD., some rights reserved (CC BY-NC), uploaded by Miguel A Mejias, PhD.",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Anser caerulescens"
+ },
+ "60839": {
+  "name": "Spilosoma virginica",
+  "common": "Virginian Tiger Moth",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/18984537/medium.jpg",
+  "photo_credit": "(c) Andy Reago & Chrissy McClarren, some rights reserved (CC BY)",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Spilosoma virginica"
+ },
+ "48662": {
+  "name": "Danaus plexippus",
+  "common": "Monarch",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/227923335/medium.jpeg",
+  "photo_credit": "(c) Alejandro Lopez, some rights reserved (CC BY-NC-SA), uploaded by Alejandro Lopez",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Danaus plexippus"
+ },
+ "28557": {
+  "name": "Storeria occipitomaculata",
+  "common": "Red-bellied Snake",
+  "iconic": "Reptilia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/28345765/medium.jpg",
+  "photo_credit": "(c) Jonathan Gagnon, some rights reserved (CC BY-NC), uploaded by Jonathan Gagnon",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Storeria occipitomaculata"
+ },
+ "48618": {
+  "name": "Echinocystis lobata",
+  "common": "prickly cucumber",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/4666634/medium.jpg",
+  "photo_credit": "(c) Monteregina (Nicole), some rights reserved (CC BY-NC-SA)",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Echinocystis lobata"
+ },
+ "59778": {
+  "name": "Pastinaca sativa",
+  "common": "wild parsnip",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/170345028/medium.jpeg",
+  "photo_credit": "(c) Pavel Gorbunov, some rights reserved (CC BY-NC), uploaded by Pavel Gorbunov",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Pastinaca sativa"
+ },
+ "42223": {
+  "name": "Odocoileus virginianus",
+  "common": "White-tailed Deer",
+  "iconic": "Mammalia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/110157765/medium.jpg",
+  "photo_credit": "(c) jefferykarafa, some rights reserved (CC BY-NC), uploaded by jefferykarafa",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Odocoileus virginianus"
+ },
+ "17855": {
+  "name": "Dryocopus pileatus",
+  "common": "Pileated Woodpecker",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/168915535/medium.jpg",
+  "photo_credit": "(c) Joshlaymon, some rights reserved (CC BY-SA)",
+  "photo_license": "cc-by-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Dryocopus pileatus"
+ },
+ "232547": {
+  "name": "Thera juniperata",
+  "common": "Juniper Carpet",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/328999232/medium.jpg",
+  "photo_credit": "(c) Cosimo Costanzia di Costigliole, some rights reserved (CC BY), uploaded by Cosimo Costanzia di Costigliole",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Thera juniperata"
+ },
+ "55719": {
+  "name": "Eristalis tenax",
+  "common": "Common Drone Fly",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/19770890/medium.jpg",
+  "photo_credit": "(c) hobiecat, some rights reserved (CC BY-NC), uploaded by hobiecat",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Eristalis tenax"
+ },
+ "7109": {
+  "name": "Lophodytes cucullatus",
+  "common": "Hooded Merganser",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/338791340/medium.jpg",
+  "photo_credit": "(c) Jason Stovin, some rights reserved (CC BY-NC), uploaded by Jason Stovin",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lophodytes cucullatus"
+ },
+ "9176": {
+  "name": "Zonotrichia leucophrys",
+  "common": "White-crowned Sparrow",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/27928/medium.jpg",
+  "photo_credit": "(c) Mike Baird, some rights reserved (CC BY)",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Zonotrichia leucophrys"
+ },
+ "1454382": {
+  "name": "Nannopterum auritum",
+  "common": "Double-crested Cormorant",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/541600012/medium.jpg",
+  "photo_credit": "(c) Ben Martin Mortimer, some rights reserved (CC BY-NC), uploaded by Ben Martin Mortimer",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Double-crested_cormorant"
+ },
+ "167829": {
+  "name": "Rhus typhina",
+  "common": "staghorn sumac",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/41368056/medium.jpg",
+  "photo_credit": "(c) mkosiewski, some rights reserved (CC BY-NC), uploaded by mkosiewski",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rhus typhina"
+ },
+ "145245": {
+  "name": "Setophaga coronata",
+  "common": "Yellow-rumped Warbler",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/128439522/medium.jpg",
+  "photo_credit": "(c) Zane Shantz, some rights reserved (CC BY-NC-ND), uploaded by Zane Shantz",
+  "photo_license": "cc-by-nc-nd",
+  "wikipedia": "https://en.wikipedia.org/wiki/Setophaga coronata"
+ },
+ "28362": {
+  "name": "Thamnophis sirtalis",
+  "common": "Common Garter Snake",
+  "iconic": "Reptilia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/3263522/medium.JPG",
+  "photo_credit": "(c) Mark Kluge, some rights reserved (CC BY-NC), uploaded by Mark Kluge",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Thamnophis sirtalis"
+ },
+ "54411": {
+  "name": "Polypodium virginianum",
+  "common": "rock polypody",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/19678/medium.jpg",
+  "photo_credit": "(c) dogtooth77, some rights reserved (CC BY-NC-SA)",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Polypodium virginianum"
+ },
+ "154353": {
+  "name": "Sunira bicolorago",
+  "common": "Bicolored Sallow",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/192324/medium.jpg",
+  "photo_credit": "(c) Anita363, some rights reserved (CC BY-NC)",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sunira bicolorago"
+ },
+ "130919": {
+  "name": "Ischnoderma resinosum",
+  "common": "Resinous Polypore",
+  "iconic": "Fungi",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/11655956/medium.jpg",
+  "photo_credit": "(c) sdifalco, some rights reserved (CC BY-NC), uploaded by sdifalco",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ischnoderma resinosum"
+ },
+ "41663": {
+  "name": "Procyon lotor",
+  "common": "Common Raccoon",
+  "iconic": "Mammalia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/290431922/medium.jpeg",
+  "photo_credit": "(c) Kat Halsey, some rights reserved (CC BY-NC), uploaded by Kat Halsey",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Procyon lotor"
+ },
+ "153441": {
+  "name": "Symphyotrichum cordifolium",
+  "common": "Common Blue Wood Aster",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/234797159/medium.jpeg",
+  "photo_credit": "(c) johnslowry, some rights reserved (CC BY-NC)",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Symphyotrichum cordifolium"
+ },
+ "54768": {
+  "name": "Carpinus caroliniana",
+  "common": "American hornbeam",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/43197119/medium.jpg",
+  "photo_credit": "(c) ThePrairiePreacher, some rights reserved (CC BY-NC), uploaded by ThePrairiePreacher",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Carpinus caroliniana"
+ },
+ "54787": {
+  "name": "Carya cordiformis",
+  "common": "bitternut hickory",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/30487088/medium.jpg",
+  "photo_credit": "(c) Plant Image Library, some rights reserved (CC BY-SA)",
+  "photo_license": "cc-by-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Carya cordiformis"
+ },
+ "320160": {
+  "name": "Cornus racemosa",
+  "common": "gray dogwood",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/452854/medium.jpg",
+  "photo_credit": "(c) Dan Mullen, some rights reserved (CC BY-NC-ND)",
+  "photo_license": "cc-by-nc-nd",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cornus racemosa"
+ },
+ "179113": {
+  "name": "Merulius tremellosus",
+  "common": "Trembling Crust",
+  "iconic": "Fungi",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/13067765/medium.jpeg",
+  "photo_credit": "(c) mycowalt, some rights reserved (CC BY-SA), uploaded by mycowalt",
+  "photo_license": "cc-by-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Merulius tremellosus"
+ },
+ "7107": {
+  "name": "Aix sponsa",
+  "common": "Wood Duck",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/171626985/medium.jpg",
+  "photo_credit": "(c) Kent Ross, some rights reserved (CC BY-NC), uploaded by Kent Ross",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Aix sponsa"
+ },
+ "9184": {
+  "name": "Zonotrichia albicollis",
+  "common": "White-throated Sparrow",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/23268661/medium.jpg",
+  "photo_credit": "Shenandoah  National Park, no known copyright restrictions (public domain)",
+  "photo_license": "pd",
+  "wikipedia": "https://en.wikipedia.org/wiki/Zonotrichia albicollis"
+ },
+ "55969": {
+  "name": "Viburnum opulus",
+  "common": "guelder-rose",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/600790807/medium.jpg",
+  "photo_credit": "(c) christian_heintzen, some rights reserved (CC BY-NC)",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Viburnum opulus"
+ },
+ "66012": {
+  "name": "Lithobates sylvaticus",
+  "common": "Wood Frog",
+  "iconic": "Amphibia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/240940498/medium.jpg",
+  "photo_credit": "(c) Ty Smith, some rights reserved (CC BY-NC), uploaded by Ty Smith",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lithobates sylvaticus"
+ },
+ "1651487": {
+  "name": "Leuconotopicus villosus",
+  "common": "Hairy Woodpecker",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/1275/medium.jpg",
+  "photo_credit": "(c) Gavan Watson, some rights reserved (CC BY-NC-SA)",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hairy_woodpecker"
+ },
+ "63585": {
+  "name": "Sarcomyxa serotina",
+  "common": "Late Oyster",
+  "iconic": "Fungi",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/236326040/medium.jpg",
+  "photo_credit": "(c) garrett_brown, some rights reserved (CC BY-NC)",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sarcomyxa serotina"
+ },
+ "54861": {
+  "name": "Ulmus thomasii",
+  "common": "rock elm",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/121493015/medium.jpeg",
+  "photo_credit": "(c) Owen Clarkin, some rights reserved (CC BY-NC), uploaded by Owen Clarkin",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ulmus thomasii"
+ },
+ "48095": {
+  "name": "Acer pensylvanicum",
+  "common": "striped maple",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/8048591/medium.jpg",
+  "photo_credit": "(c) Ashley M Bradford, some rights reserved (CC BY-NC), uploaded by Ashley M Bradford",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Acer pensylvanicum"
+ },
+ "51875": {
+  "name": "Trifolium pratense",
+  "common": "Red Clover",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/590999108/medium.jpg",
+  "photo_credit": "(c) Hornbeam Arts, some rights reserved (CC BY-NC)",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Trifolium pratense"
+ },
+ "55721": {
+  "name": "Silene vulgaris",
+  "common": "bladder campion",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/32031184/medium.jpeg",
+  "photo_credit": "(c) Bonnie Kinder, some rights reserved (CC BY-NC), uploaded by Bonnie Kinder",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Silene vulgaris"
+ },
+ "54839": {
+  "name": "Populus grandidentata",
+  "common": "bigtooth aspen",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/25786553/medium.jpg",
+  "photo_credit": "(c) Brad Walker, some rights reserved (CC BY-NC), uploaded by Brad Walker",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Populus grandidentata"
+ },
+ "54762": {
+  "name": "Acer saccharinum",
+  "common": "silver maple",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/135565/medium.jpg",
+  "photo_credit": "no rights reserved",
+  "photo_license": "cc0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Acer saccharinum"
+ },
+ "82225": {
+  "name": "Lophocampa caryae",
+  "common": "Hickory Tussock Moth",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/35922/medium.jpg",
+  "photo_credit": "(c) Cyndy Sims Parr, some rights reserved (CC BY-SA)",
+  "photo_license": "cc-by-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lophocampa caryae"
+ },
+ "84109": {
+  "name": "Pisaurina mira",
+  "common": "American Nursery Web Spider",
+  "iconic": "Arachnida",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/3896255/medium.jpg",
+  "photo_credit": "(c) crgillette, some rights reserved (CC BY-NC), uploaded by crgillette",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Pisaurina mira"
+ },
+ "62376": {
+  "name": "Gaultheria procumbens",
+  "common": "Eastern Teaberry",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/17300/medium.jpg",
+  "photo_credit": "(c) arghman, some rights reserved (CC BY-NC-ND)",
+  "photo_license": "cc-by-nc-nd",
+  "wikipedia": "https://en.wikipedia.org/wiki/Gaultheria procumbens"
+ },
+ "1671287": {
+  "name": "Pseudaletia unipuncta",
+  "common": "Armyworm Moth",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/60709959/medium.jpg",
+  "photo_credit": "(c) John M. Faggard, some rights reserved (CC BY-NC), uploaded by John M. Faggard",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mythimna_unipuncta"
+ },
+ "118513": {
+  "name": "Hypena scabra",
+  "common": "Green Cloverworm Moth",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/114424236/medium.jpg",
+  "photo_credit": "(c) Royal Tyler, some rights reserved (CC BY-NC-SA), uploaded by Royal Tyler",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hypena scabra"
+ },
+ "215208": {
+  "name": "Alsophila pometaria",
+  "common": "Fall Cankerworm Moth",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/2731089/medium.jpg",
+  "photo_credit": "(c) Bill Keim, some rights reserved (CC BY)",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Alsophila pometaria"
+ },
+ "130017": {
+  "name": "Catocala relicta",
+  "common": "White Underwing",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/95690415/medium.jpeg",
+  "photo_credit": "no rights reserved, uploaded by Nancy Mullin",
+  "photo_license": "cc0",
+  "wikipedia": "https://en.wikipedia.org/wiki/Catocala relicta"
+ },
+ "142990": {
+  "name": "Autographa precationis",
+  "common": "Common Looper Moth",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/431967509/medium.jpg",
+  "photo_credit": "(c) Eric B\u00e9gin, some rights reserved (CC BY-NC-ND)",
+  "photo_license": "cc-by-nc-nd",
+  "wikipedia": "https://en.wikipedia.org/wiki/Autographa precationis"
+ },
+ "9083": {
+  "name": "Cardinalis cardinalis",
+  "common": "Northern Cardinal",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/189434971/medium.jpg",
+  "photo_credit": "(c) Laura Keene, some rights reserved (CC BY-NC), uploaded by Laura Keene",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cardinalis cardinalis"
+ },
+ "47726": {
+  "name": "Acer negundo",
+  "common": "box elder",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/486113480/medium.jpg",
+  "photo_credit": "(c) Jay Pruett, some rights reserved (CC BY), uploaded by Jay Pruett",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Acer negundo"
+ },
+ "48078": {
+  "name": "Acer nigrum",
+  "common": "black maple",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/76455598/medium.jpeg",
+  "photo_credit": "(c) allenwoodliffe, some rights reserved (CC BY-NC), uploaded by allenwoodliffe",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Acer nigrum"
+ },
+ "62377": {
+  "name": "Rubus odoratus",
+  "common": "purple-flowered raspberry",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/17302/medium.jpg",
+  "photo_credit": "(c) Juha Haataja, some rights reserved (CC BY-NC-SA)",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Rubus odoratus"
+ },
+ "55830": {
+  "name": "Glechoma hederacea",
+  "common": "ground-ivy",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/280941528/medium.jpg",
+  "photo_credit": "(c) viktorie_kolouchova, some rights reserved (CC BY-NC)",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Glechoma hederacea"
+ },
+ "5212": {
+  "name": "Buteo jamaicensis",
+  "common": "Red-tailed Hawk",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/101327658/medium.jpg",
+  "photo_credit": "(c) Craig K. Hunt, some rights reserved (CC BY-NC), uploaded by Craig K. Hunt",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Buteo jamaicensis"
+ },
+ "39885": {
+  "name": "Emydoidea blandingii",
+  "common": "Blanding's Turtle",
+  "iconic": "Reptilia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/20421216/medium.jpg",
+  "photo_credit": "(c) Riley-Brendan Walsh, some rights reserved (CC BY-NC), uploaded by Riley-Brendan Walsh",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Emydoidea blandingii"
+ },
+ "54410": {
+  "name": "Dryopteris marginalis",
+  "common": "marginal wood fern",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/177337555/medium.jpg",
+  "photo_credit": "(c) Link Davis, some rights reserved (CC BY-NC), uploaded by Link Davis",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Dryopteris marginalis"
+ },
+ "54780": {
+  "name": "Quercus bicolor",
+  "common": "swamp white oak",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/18737632/medium.jpg",
+  "photo_credit": "(c) Jean-Pol GRANDMONT, some rights reserved (CC BY-SA)",
+  "photo_license": "cc-by-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Quercus bicolor"
+ },
+ "54808": {
+  "name": "Fraxinus pennsylvanica",
+  "common": "green ash",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/201680198/medium.jpg",
+  "photo_credit": "(c) kjsytsma, some rights reserved (CC BY-NC), uploaded by kjsytsma",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Fraxinus pennsylvanica"
+ },
+ "19765": {
+  "name": "Megascops asio",
+  "common": "Eastern Screech-Owl",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/5651/medium.jpg",
+  "photo_credit": "(c) Michael Hodge, some rights reserved (CC BY-NC-SA)",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Megascops asio"
+ },
+ "6915": {
+  "name": "Cygnus buccinator",
+  "common": "Trumpeter Swan",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/5930863/medium.jpeg",
+  "photo_credit": "(c) belyykit, some rights reserved (CC BY-NC), uploaded by belyykit",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cygnus buccinator"
+ },
+ "6921": {
+  "name": "Cygnus olor",
+  "common": "Mute Swan",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/622245220/medium.jpg",
+  "photo_credit": "(c) missoulabirdnerd, some rights reserved (CC BY-NC), uploaded by missoulabirdnerd",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cygnus olor"
+ },
+ "9744": {
+  "name": "Agelaius phoeniceus",
+  "common": "Red-winged Blackbird",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/31310264/medium.jpg",
+  "photo_credit": "(c) Bridget Spencer, some rights reserved (CC BY-NC), uploaded by Bridget Spencer",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Agelaius phoeniceus"
+ },
+ "14801": {
+  "name": "Sitta carolinensis",
+  "common": "White-breasted Nuthatch",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/30827676/medium.jpg",
+  "photo_credit": "(c) Mark McKnight, some rights reserved (CC BY-NC), uploaded by Mark McKnight",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sitta carolinensis"
+ },
+ "17008": {
+  "name": "Sayornis phoebe",
+  "common": "Eastern Phoebe",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/20207164/medium.jpg",
+  "photo_credit": "(c) Kerry Carloy, some rights reserved (CC BY-NC), uploaded by Kerry Carloy",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Sayornis phoebe"
+ },
+ "24268": {
+  "name": "Pseudacris crucifer",
+  "common": "Spring Peeper",
+  "iconic": "Amphibia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/6428345/medium.jpg",
+  "photo_credit": "(c) Bruce J. Mohn, some rights reserved (CC BY-NC), uploaded by Bruce J. Mohn",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Pseudacris crucifer"
+ },
+ "26790": {
+  "name": "Ambystoma maculatum",
+  "common": "Spotted Salamander",
+  "iconic": "Amphibia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/260526126/medium.png",
+  "photo_credit": "(c) Ty Smith, some rights reserved (CC BY-NC), uploaded by Ty Smith",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ambystoma maculatum"
+ },
+ "43794": {
+  "name": "Castor canadensis",
+  "common": "American Beaver",
+  "iconic": "Mammalia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/172437951/medium.jpg",
+  "photo_credit": "(c) Rodney Campbell, some rights reserved (CC BY)",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Castor canadensis"
+ },
+ "47219": {
+  "name": "Apis mellifera",
+  "common": "Western Honey Bee",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/389898647/medium.jpeg",
+  "photo_credit": "(c) L\u00ea Thanh Hoa, some rights reserved (CC BY-NC), uploaded by L\u00ea Thanh Hoa",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Apis mellifera"
+ },
+ "48435": {
+  "name": "Adiantum pedatum",
+  "common": "northern maidenhair fern",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/351775679/medium.jpeg",
+  "photo_credit": "(c) Michael J. Papay, some rights reserved (CC BY), uploaded by Michael J. Papay",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Adiantum pedatum"
+ },
+ "49884": {
+  "name": "Betula populifolia",
+  "common": "gray birch",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/188265652/medium.gif",
+  "photo_credit": "(c) Homer Edward Price, some rights reserved (CC BY)",
+  "photo_license": "cc-by",
+  "wikipedia": "https://en.wikipedia.org/wiki/Betula populifolia"
+ },
+ "53387": {
+  "name": "Cornus sericea",
+  "common": "red osier dogwood",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/49973133/medium.jpg",
+  "photo_credit": "(c) cwtw, some rights reserved (CC BY-NC), uploaded by cwtw",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Cornus sericea"
+ },
+ "54327": {
+  "name": "Vespa crabro",
+  "common": "European Hornet",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/18078852/medium.jpeg",
+  "photo_credit": "(c) Jakob Fahr, some rights reserved (CC BY-NC), uploaded by Jakob Fahr",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Vespa crabro"
+ },
+ "55972": {
+  "name": "Frangula alnus",
+  "common": "alder buckthorn",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/11812182/medium.jpeg",
+  "photo_credit": "(c) Sten Porse, some rights reserved (CC BY-SA)",
+  "photo_license": "cc-by-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Frangula alnus"
+ },
+ "58531": {
+  "name": "Colias philodice",
+  "common": "Clouded Sulphur",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/83633419/medium.jpg",
+  "photo_credit": "(c) Jeffrey Murphy, some rights reserved (CC BY-NC), uploaded by Jeffrey Murphy",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Colias philodice"
+ },
+ "59029": {
+  "name": "Verbascum thapsus",
+  "common": "great mullein",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/154269828/medium.jpg",
+  "photo_credit": "(c) adrienne alms, some rights reserved (CC BY-NC), uploaded by adrienne alms",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Verbascum thapsus"
+ },
+ "64237": {
+  "name": "Phragmites australis",
+  "common": "common reed",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/590394681/medium.jpg",
+  "photo_credit": "(c) Luca Boscain, some rights reserved (CC BY-NC), uploaded by Luca Boscain",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Phragmites australis"
+ },
+ "65982": {
+  "name": "Lithobates clamitans",
+  "common": "Green Frog",
+  "iconic": "Amphibia",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/199907744/medium.jpg",
+  "photo_credit": "(c) suburbirder, some rights reserved (CC BY-NC), uploaded by suburbirder",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Lithobates clamitans"
+ },
+ "153208": {
+  "name": "Ilex mucronata",
+  "common": "Mountain holly",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/159818/medium.JPG",
+  "photo_credit": "(c) Rob Curtis, some rights reserved (CC BY-NC-SA), uploaded by Rob Curtis",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Ilex mucronata"
+ },
+ "179786": {
+  "name": "Hepatica acutiloba",
+  "common": "sharp-lobed hepatica",
+  "iconic": "Plantae",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/196771696/medium.jpg",
+  "photo_credit": "(c) Gary Yankech, some rights reserved (CC BY-NC-SA), uploaded by Gary Yankech",
+  "photo_license": "cc-by-nc-sa",
+  "wikipedia": "https://en.wikipedia.org/wiki/Hepatica acutiloba"
+ },
+ "203451": {
+  "name": "Papaipema inquaesita",
+  "common": "Sensitive Fern Borer Moth",
+  "iconic": "Insecta",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/97038150/medium.jpeg",
+  "photo_credit": "(c) Steve King, some rights reserved (CC BY-NC), uploaded by Steve King",
+  "photo_license": "cc-by-nc",
+  "wikipedia": "https://en.wikipedia.org/wiki/Papaipema inquaesita"
+ },
+ "485176": {
+  "name": "Mareca americana",
+  "common": "American Wigeon",
+  "iconic": "Aves",
+  "photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/111381541/medium.jpg",
+  "photo_credit": "(c) Kala Murphy King, some rights reserved (CC BY-NC-ND), uploaded by Kala Murphy King",
+  "photo_license": "cc-by-nc-nd",
+  "wikipedia": "https://en.wikipedia.org/wiki/Mareca americana"
  }
 }
